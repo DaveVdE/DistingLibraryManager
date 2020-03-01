@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DistingLibraryManager.Models;
+using Microsoft.Win32;
 
 namespace DistingLibraryManager
 {
@@ -20,9 +22,26 @@ namespace DistingLibraryManager
     /// </summary>
     public partial class MainWindow : Window
     {
+        private SampleSet _sampleSet;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            _sampleSet = new SampleSet();
+
+            Samples.DataContext = _sampleSet;
+        }
+
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            var dialog = new OpenFileDialog
+            {
+                CheckFileExists = true,
+                Multiselect = true,
+            };
+
+            dialog.ShowDialog();
         }
     }
 }

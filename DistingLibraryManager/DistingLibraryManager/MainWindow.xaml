@@ -5,8 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DistingLibraryManager"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="451.077" Width="800">
+    <DockPanel Margin="5">
+        <DockPanel DockPanel.Dock="Bottom" Height="48">
+            <Button Name="Add" Content="Add..." DockPanel.Dock="Left" Width="75" Margin="5" Click="Add_Click" />
+            <Button Name="Remove" Content="Remove" DockPanel.Dock="Left" Width="75" Margin="5"/>
+            <Button Name="Save" Content="Save..." DockPanel.Dock="Right" Width="75" Margin="5"/>
+            <Button Name="Load" Content="Load..." DockPanel.Dock="Right" Width="75" Margin="5"/>
+            <Frame />
+        </DockPanel>
+        <GroupBox Header="Properties" Width="245" DockPanel.Dock="Right" Margin="5" />
+        <ListBox Name="Samples" Margin="5" Height="347" AllowDrop="True" SelectionMode="Extended" />
+    </DockPanel>
 </Window>
