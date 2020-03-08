@@ -30,7 +30,7 @@ namespace DistingLibraryManager
 
             _sampleSet = new SampleSet();
 
-            Samples.DataContext = _sampleSet;
+            //Samples.DataContext = _sampleSet;
         }
 
         private void Add_Click(object sender, RoutedEventArgs e)
